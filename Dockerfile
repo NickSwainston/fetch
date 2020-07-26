@@ -39,3 +39,8 @@ RUN conda install -c anaconda \
                               numba \
                               pyyaml=3.13 && \
     python setup.py install
+
+WORKDIR /home/soft
+RUN git clone https://github.com/devanshkv/pysigproc.git && \
+    cd pysigproc && \
+    python setup.py install
