@@ -3,7 +3,8 @@ FROM continuumio/miniconda3
 COPY . /home/soft/fetch
 WORKDIR /home/soft/fetch
 RUN conda install -c anaconda numpy \
-                              pandas && \
+                              pandas \
+                              scipy && \
     python setup.py install
 
 WORKDIR /home/soft
